@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\ItemController;
 
 Route::get('/items', [ItemController::class, 'index']); // Endpoint GET
@@ -12,9 +11,6 @@ Route::delete('/items/{id}', [ItemController::class, 'destroy']); // Excluir um 
 
 
 Route::get('/', function () {
-    echo "teste"; die();
+    return view('index');
 });
 
-Route::post('/', function () {
-    echo "teste"; die();
-});
